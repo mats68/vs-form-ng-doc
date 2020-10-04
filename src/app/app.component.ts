@@ -1,6 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { AppLinks } from 'src/app/config/links'
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   private _mobileQueryListener: () => void;
   mobileQuery: MediaQueryList;
-
+  appLinks = AppLinks;
   private autoLogoutSubscription: Subscription;
 
   constructor(

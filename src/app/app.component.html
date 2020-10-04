@@ -26,31 +26,10 @@
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56"
-      class="sidenav"
-    >
+      class="sidenav">
       <mat-nav-list>
-        <h3 mat-subheader>Home</h3>
-
-        <a mat-list-item [routerLink]="['/installation']" routerLinkActive="active">
-          <mat-icon mat-list-icon>
-            get_app
-          </mat-icon>
-          <p mat-line>Installation</p>
-        </a>
-
-        <a mat-list-item [routerLink]="['/concepts']" routerLinkActive="active">
-          <mat-icon mat-list-icon>
-            zoom_in
-          </mat-icon>
-          <p mat-line>Concepts</p>
-        </a>
-
-        <a mat-list-item [routerLink]="['/concepts']" routerLinkActive="active">
-          <mat-icon mat-list-icon>
-            api
-          </mat-icon>
-          <p mat-line>API</p>
-        </a>
+        
+        <menu-links [Links]='appLinks' [LeftMargin]='0'></menu-links>
 
         <mat-divider></mat-divider>
 

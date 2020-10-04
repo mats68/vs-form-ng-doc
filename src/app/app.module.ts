@@ -57,6 +57,8 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { ConceptsComponent } from './pages/concepts/concepts.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ApiComponent } from './pages/api/api.component';
+import { MenuLinksComponent } from './components/menu-links/menu-links.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -67,7 +69,9 @@ import { ApiComponent } from './pages/api/api.component';
     PageNotFoundComponent,
     ConceptsComponent,
     AboutComponent,
-    ApiComponent
+    ApiComponent,
+    MenuLinksComponent,
+    HeaderComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,9 @@
+<ng-container *ngFor='let link of Links'>
+    <a mat-list-item [routerLink]='link.link' [fragment]='link.fragment' class="rahmen" [style]='leftMargin'>
+        <mat-icon *ngIf='link.icon' mat-icon>
+            {{link.icon}}
+        </mat-icon>
+        <p mat-line>{{link.label}}</p>
+    </a>
+    <menu-links *ngIf='link.children' [Links]='link.children' [LeftMargin]='LeftMargin + 20'></menu-links>
+</ng-container>
