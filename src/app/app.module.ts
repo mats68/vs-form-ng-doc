@@ -53,7 +53,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { ScullyLibModule } from '@scullyio/ng-lib';
 import { ConceptsComponent } from './pages/concepts/concepts.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ApiComponent } from './pages/api/api.component';
@@ -130,7 +129,6 @@ import { HeaderComponent } from './components/header/header.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
