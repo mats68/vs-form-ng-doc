@@ -3,7 +3,7 @@
         <mat-icon *ngIf='link.icon' mat-icon>
             {{link.icon}}
         </mat-icon>
-        <p mat-line>{{link.label}}</p>
+        <p mat-line [class]='activeRoute(link)'>{{link.numbering}} {{link.label}}</p>
     </a>
     <menu-links *ngIf='link.children' [Links]='link.children' [LeftMargin]='LeftMargin + 20'></menu-links>
 </ng-container>

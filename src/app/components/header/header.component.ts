@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
     if (!this.Link) return ''
     if (this.Link.id < 100) return 'mat-h1';
     if (this.Link.id < 1000) return 'mat-h2';
+    return 'mat-h3';
   }
 
   findLink(links: ILinks) {

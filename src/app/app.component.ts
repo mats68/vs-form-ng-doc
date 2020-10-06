@@ -1,7 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { AppLinks } from 'src/app/config/links'
+import { AppLinks, ILink, ILinks } from 'src/app/config/links'
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,22 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.traverseLinks(this.appLinks);
+    console.log(this.appLinks);
 
+  }
+
+  traverseLinks(links: ILinks, pLink?: ILink) {
+    links.forEach(l => {
+      if (pLink) {
+        if (!l.link) l.link = pLink.link;
+        l.numbering = pLink.numbering + '.' + l.id.toString().split('').pop()
+      } else {
+        l.numbering = l.id.toString();
+      }
+      if (l.children) this.traverseLinks(l.children, l);
+    })
+    
   }
 
   ngOnDestroy(): void {

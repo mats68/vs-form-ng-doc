@@ -28,7 +28,7 @@
       fixedTopGap="56"
       class="sidenav">
       <mat-nav-list>
-        
+
         <menu-links [Links]='appLinks' [LeftMargin]='0'></menu-links>
 
         <mat-divider></mat-divider>
@@ -53,7 +53,9 @@
 
     <!-- Main content -->
     <mat-sidenav-content class="sidenav-content">
-      <router-outlet></router-outlet>
+      <mat-card class="content">
+        <router-outlet></router-outlet>
+      </mat-card>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

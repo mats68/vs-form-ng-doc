@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router,NavigationEnd  } from '@angular/router';
+import { ActivatedRoute, Router,UrlSegment,NavigationEnd   } from '@angular/router';
 import {ILinks, ILink } from 'src/app/config/links'
 
 @Component({
@@ -14,10 +14,22 @@ export class MenuLinksComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-  }
+    this.router.events.subscribe(
+      (event: any) => {
+        if (event instanceof NavigationEnd) {
+          console.log('this.router.url', this.router.url);
+        }
+      }
+    );  
+    }
   
   get leftMargin() {
     return `margin-left: ${this.LeftMargin}px`
+  }
+
+  activeRoute(link: ILink): string {
+    const url = link.fragment ? link.link + '#' + link.fragment : link.link;
+    return this.router.url === url ? 'active' : '';
   }
 
   onAnchorClick(link: ILink) {
@@ -29,5 +41,6 @@ export class MenuLinksComponent implements OnInit {
           anchor.scrollIntoView();
       }
   });  }
+
 
 }

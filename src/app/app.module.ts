@@ -53,11 +53,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { ConceptsComponent } from './pages/concepts/concepts.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ApiComponent } from './pages/api/api.component';
 import { MenuLinksComponent } from './components/menu-links/menu-links.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ConceptsBasicExamplesComponent } from './pages/concepts-basic-examples/concepts-basic-examples.component';
+import { ConceptsLayoutComponent } from './pages/concepts-layout/concepts-layout.component';
+import { ConceptsValidatoinComponent } from './pages/concepts-validatoin/concepts-validatoin.component';
+import { ConceptsTablesComponent } from './pages/concepts-tables/concepts-tables.component';
 
 
 @NgModule({
@@ -66,11 +69,14 @@ import { HeaderComponent } from './components/header/header.component';
     InstallationComponent,
     FeaturesComponent,
     PageNotFoundComponent,
-    ConceptsComponent,
     AboutComponent,
     ApiComponent,
     MenuLinksComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConceptsBasicExamplesComponent,
+    ConceptsLayoutComponent,
+    ConceptsValidatoinComponent,
+    ConceptsTablesComponent
   ],
   imports: [
     AppRoutingModule,
