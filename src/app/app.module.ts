@@ -1,3 +1,5 @@
+import { BiFormModuleModule } from '@next-gen/formular-engine';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -9,6 +11,8 @@ import { InstallationComponent } from './pages/installation/installation.compone
 import { FeaturesComponent } from './pages/features/features.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -61,6 +65,8 @@ import { ConceptsBasicExamplesComponent } from './pages/concepts-basic-examples/
 import { ConceptsLayoutComponent } from './pages/concepts-layout/concepts-layout.component';
 import { ConceptsValidatoinComponent } from './pages/concepts-validatoin/concepts-validatoin.component';
 import { ConceptsTablesComponent } from './pages/concepts-tables/concepts-tables.component';
+import { ExampleComponent } from './components/example/example.component';
+import { CodeComponent } from './components/code/code.component';
 
 
 @NgModule({
@@ -76,7 +82,9 @@ import { ConceptsTablesComponent } from './pages/concepts-tables/concepts-tables
     ConceptsBasicExamplesComponent,
     ConceptsLayoutComponent,
     ConceptsValidatoinComponent,
-    ConceptsTablesComponent
+    ConceptsTablesComponent,
+    ExampleComponent,
+    CodeComponent
   ],
   imports: [
     AppRoutingModule,
@@ -135,6 +143,7 @@ import { ConceptsTablesComponent } from './pages/concepts-tables/concepts-tables
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BiFormModuleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

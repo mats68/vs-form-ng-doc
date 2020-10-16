@@ -1,0 +1,31 @@
+<div class="bg">
+  <div class="header">
+    <div>
+      {{title}}
+    </div>
+    <span class="spacer"></span>
+
+    <button mat-icon-button 
+    matTooltip="Schema anzeigen"
+    (click)='showCode()'>
+      <mat-icon>
+        code
+      </mat-icon>
+    </button>
+    <button mat-icon-button
+    matTooltip="Bearbeiten"
+    >
+      <mat-icon>
+        open_in_new
+      </mat-icon>
+    </button>
+  </div>
+  <div *ngIf='ShowCode'>
+    <hr />
+    <div class="code">{{schemaStr}}</div>
+  </div>
+  <hr />
+  <div>
+    <bi-form [schema]='schema'></bi-form>
+  </div>
+</div>
