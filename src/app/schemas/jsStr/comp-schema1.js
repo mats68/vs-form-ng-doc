@@ -1,6 +1,5 @@
-import { ISchema } from '@next-gen/formular-engine';
 
-export const schema1: ISchema = {
+const schema1 = `export const schema1 = {
     type: 'form',
     label: 'Formular',
     children: [
@@ -15,5 +14,7 @@ export const schema1: ISchema = {
             label: 'OK',
         }
     ]
-}
+};
+`
 
+export default schema1

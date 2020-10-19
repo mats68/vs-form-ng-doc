@@ -7,7 +7,9 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
+    "comp": "npm run compile && npm run buildSchema" ,
     "buildSchema": "node ./buildSchemas.js",
+    "compile": "tsc -p tsconfig-compile.json",
     "e2e": "ng e2e"
   },
   "private": true,

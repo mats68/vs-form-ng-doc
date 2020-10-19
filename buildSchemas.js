@@ -11,12 +11,12 @@ const writeString = (readDir, writeDir) => {
 const ${varName} = ${strContent}
 
 export default ${varName}`
-
-      var filename = path.join(writeDir, 'comp-' + varName + '.ts')
-      console.log('filename: ', filename)
+      var ending = path.extname(file)
+      var filename = path.join(writeDir, 'comp-' + varName + ending)
+      // console.log('filename: ', filename)
       try {
         fs.writeFileSync(filename, str)
-        console.log()
+        // console.log()
       } catch (error) {
         console.log(readDir, writeDir, varName)
       }
@@ -47,7 +47,8 @@ const writeIndex = (readDir, ext) => {
   fs.writeFileSync(path.join(readDir, 'index' + ext), str)
 }
 
-writeString(path.join(__dirname, 'src/app/schemas'), path.join(__dirname, 'src/app/compiledSchema'))
+writeString(path.join(__dirname, 'src/app/schemas/ts'), path.join(__dirname, 'src/app/schemas/tsStr'))
+writeString(path.join(__dirname, 'src/app/schemas/js'), path.join(__dirname, 'src/app/schemas/jsStr'))
 // writeString(path.join(__dirname, 'schemas/ts'), path.join(__dirname, 'schemas/tsStr'))
 // writeString(path.join(__dirname, 'schemas/js'), path.join(__dirname, 'schemas/jsStr'))
 // writeIndex(path.join(__dirname, 'schemas/js'), '.js')
